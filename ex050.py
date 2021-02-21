@@ -5,8 +5,10 @@ e mostre a soma apenas daqueles que forem pares. Se o valor digitado for
 
 """
 soma_par = 0
-for c in range(6):
-    num = int(input('Digite um número inteiro: '))
+cont = 0
+for c in range(1, 7):
+    num = int(input(f'Digite o {c}º número inteiro: '))
     if num % 2 == 0:
+        cont += 1
         soma_par += num
-print(f'A soma de apenas os números pares é: {soma_par}')
+print(f'A soma de apenas os {cont} números pares é: {soma_par}')
