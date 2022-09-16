@@ -3,21 +3,24 @@ Exercício Python 62: Melhore o DESAFIO 61, perguntando para o usuário se ele q
 
 """
 
-from cgi import print_arguments
 
-
+print('Gerador de P.A.')
+print('-=' * 10)
 primeiro_termo = int(input('Informe o 1º termo da P.A.: ').strip())
-quant_termos = int(input('Informe a quantidade de termos da P.A.: ').strip())
 razao = int(input('Informe a razão da P.A.: '))
-while quant_termos != 0:
-    ultimo_termo = primeiro_termo + (quant_termos - 1) * razao
-    print(f'razão: {razao} e último termo: {ultimo_termo}.')
-    print('A progressão aritmética resultante será:')
-    i = primeiro_termo
-    while primeiro_termo <= i <= ultimo_termo:
-        print(f'{i}', end=' -> ')
-        # termo = primeiro_termo + (i - 1) * razao
-        i += razao
-    quant_termos = int(input(
-        'Informe a quantidade de termos da P.A. (digite 0 caso deseje encerrar o programa): ').strip())
-print('ACABOU.', end='')
+termo = primeiro_termo
+cont = 1
+total_termos = 0
+mais_termos = 10
+
+while mais_termos != 0:
+    total_termos = total_termos + mais_termos
+    while cont <= total_termos:
+        print(f'{termo} -> ', end='')
+        termo += razao
+        cont += 1
+    print('PAUSA')
+    mais_termos = int(
+        input('Quantos termos você quer imprimir a mais?: ').strip())
+print(f'Progessão aritmética finalizada com {total_termos} mostrados.')
+print('ACABOU')
