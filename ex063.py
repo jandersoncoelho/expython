@@ -7,6 +7,7 @@ Exercício Python 63: Escreva um programa que leia um número N inteiro qualquer
 '''
 
 
+print('-=' * 10)
 print('Sequência de Fionacci', end='\n')
 print('-=' * 10)
 
