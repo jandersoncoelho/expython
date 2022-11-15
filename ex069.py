@@ -17,6 +17,11 @@ while True:
     if continuar in 'Ss':
         sexo = input(
             'Digite o sexo [ M -> Masculino / F -> Feminino]: ').strip()
+        while sexo not in 'MmFf':
+            sexo = ''
+            sexo = input(
+                'Digite o sexo [ M -> Masculino / F -> Feminino]: ').strip()
+
         idade = int(input('Digite a idade da pessoa: ').strip())
 
         if (idade >= 18):
@@ -28,7 +33,9 @@ while True:
         if ((sexo in 'Ff') and idade < 20):
             cont_idade_mulher_menor_20 += 1
 
-        continuar = str(input('Deseja continuar [S/N]: '))
+        continuar = str(input('Deseja continuar [S/N]: ').strip())
+        while continuar not in 'SsNn':
+            continuar = str(input('Deseja continuar [S/N]: ').strip())
     else:
         break
 print(f'Foram informadas {cont_18} pessoas com 18 anos ou mais.')
