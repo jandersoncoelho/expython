@@ -131,3 +131,4 @@ dmypy.json
 README.md.backup
 
 .vscode/
+*.txt
