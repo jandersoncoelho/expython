@@ -28,9 +28,4 @@ tem_cinco = 5 in lista_numeros
 print('-=' * 40)
 print(f'Esta lista tem {quant_num_digitados} elementos.')
 print(f'Esta lista na forma decrescente fica {lista_numeros}.')
-""" if 5 in lista_numeros:
-    print('O valor 5 foi digitado e se encontra na lista')
-else:
-    print('O valor 5 não foi digitado e não se encontra na lista')
- """
 print(f'O valor 5 {"está" if tem_cinco else "não está"} na lista.')
