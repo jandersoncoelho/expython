@@ -5,17 +5,19 @@ Exercício Python 097:
 - Faça um programa que tenha uma função chamada escreva().
 - Ela receberá um texto qualquer como parâmetro.
 - Mostre uma mensagem com tamanho adaptável e centralizado.
+- O programa deve colocar as
 
-Ex:
+Exemplo:
 
-escreva(‘Olá, Mundo!’)
+"escreva(‘Olá, Mundo!’)
 
 Saída:
 
 ~~~~~~~~~ 
 Olá, Mundo!
 ~~~~~~~~~
-
+"
+- O programa deve colocar as linhas sempre maiores que as mensagens
 '''
 
 def escreva(mensagem):
