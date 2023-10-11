@@ -25,14 +25,14 @@ def voto(ano_nascimento):
     """
     from datetime import date
     ano_atual = date.today().year
-    idade = ano_atual - ano_nascimento
+    idade_pessoa = ano_atual - ano_nascimento
 
-    if idade < 16:
-        return idade, "VOTO NEGADO"
-    elif 16 <= idade < 18 or idade >= 70:
-        return idade, "VOTO OPCIONAL"
+    if idade_pessoa < 16:
+        return idade_pessoa, "VOTO NEGADO"
+    elif 16 <= idade_pessoa < 18 or idade_pessoa >= 70:
+        return idade_pessoa, "VOTO OPCIONAL"
     else:
-        return idade, "VOTO OBRIGATÓRIO"
+        return idade_pessoa, "VOTO OBRIGATÓRIO"
 
 
 # Exemplo de uso da função
