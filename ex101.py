@@ -4,7 +4,7 @@ Exercício Python 101:
 -Crie um programa que tenha uma função chamada voto() que vai receber como parâmetro o ano de nascimento de uma pessoa.
 -retorne um valor literal indicando se uma pessoa tem voto NEGADO, OPCIONAL e OBRIGATÓRIO nas eleições.
 -Crie "docstrings" para quando o usuário digitar a função "help()" saiba como utilizá-la.
-- Escreva o código usando a "PEP8" e o "Zen to Python"
+-Escreva o código usando a "PEP8" e o "Zen to Python"
 
 '''
 
