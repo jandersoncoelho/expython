@@ -44,3 +44,4 @@ def fatorial(numero, show=False):
 n = int(input("Digite um número para calcular o fatorial: "))
 mostrar_processo = input("Deseja mostrar o processo de cálculo? (S/N): ").strip().upper() == "S"
 print(fatorial(n, show=mostrar_processo))
+help(fatorial)
