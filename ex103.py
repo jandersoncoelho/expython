@@ -12,18 +12,23 @@ Exercício Python 103:
 
 
 def ficha(nome_jogador='<desconhecido>', quantidade_gols=None):
+    restult_ficha = []
     if quantidade_gols.isnumeric():
-        return nome_jogador, quantidade_gols
+        restult_ficha.append(quantidade_gols)
     else:
-        return nome_jogador, quantidade_gols
+        restult_ficha.append(0)
+    if nome_jogador.strip() != '':
+        restult_ficha.append(nome_jogador)
+    else:
+        restult_ficha.append('<desconhecido>')
 
-    # return nome_jogador, gols_jogador
+    return restult_ficha
 
 
 # Programa Principal
 nome = str(input('Informe o nome do jogador: '))
 gols = str(input('Informe a quantidade de gols: '))
 
-ficha_jogador = ficha(nome_jogador=nome, quantidade_gols=gols)
+ficha_jogador = ficha(nome, gols)
 
-print(f'O jogador {ficha_jogador[0]}, fez {ficha_jogador[1]} gols.')
+print(f'O jogador {ficha_jogador[1]}, fez {ficha_jogador[0]} gols.')
