@@ -14,7 +14,7 @@ for i in range(1, 8):
 lista_numeros[0].sort()  # Ordena os números pares em ordem crescente
 lista_numeros[1].sort()  # Ordena os números ímpares em ordem crescente
 
-# Interpolação de strings para exibir os resultados
+# Interpolação de textos para exibir os resultados
 print('-=' * 40)
 print(f'Os valores pares da lista de números são: {", ".join(str(n) for n in lista_numeros[0])}.')
 print(f'Os valores ímpares da lista são: {", ".join(str(n) for n in lista_numeros[1])}.')
