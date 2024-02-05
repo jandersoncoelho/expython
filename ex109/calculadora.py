@@ -1,8 +1,8 @@
-from ex109 import moeda
+from ex110 import moeda
 
 preco = float(input("Digite o Preço: R$"))
-porcentagem = float(input("Digite o acréscimo em %: "))
 
+porcentagem = float(input("Digite o acréscimo em %: "))
 preco_aumentado = moeda.aumentar(porcentagem, preco, formatado=True)
 preco_decontado = moeda.diminuir(porcentagem, preco, formatado=True)
 preco_dobro = moeda.dobro(preco, formatado=True)

@@ -30,3 +30,4 @@ def metade(numero=0, formatado=False):
 def moeda(preco=0,simbolo_moeda="R$"):
     resultado= f'{simbolo_moeda}{preco:.2f}'.replace('.', ',')
     return resultado
+
