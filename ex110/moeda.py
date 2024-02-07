@@ -1,8 +1,5 @@
 """
-Exercício Python 108:
-
-- Adapte o código do desafio #107, criando uma função adicional chamada moeda()
-- E deve mostrar os números como um valor monetário formatado em Real Brasileiro
+Exercício Python 110:
 
 """
 
