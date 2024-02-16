@@ -1,3 +1,6 @@
-from utilidadescev import dado
+from utilidadescev import dado, moeda
+# from utilidadescev import moeda
 
-dado.leia_dinheiro('digite um número: R$')
+preco = dado.leia_dinheiro('digite um número: R$')
+moeda.resumo(preco, 10, 10)
+

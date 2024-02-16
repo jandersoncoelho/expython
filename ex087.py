@@ -22,10 +22,10 @@ for l in range(len(matriz)):
         matriz[l][c] = int(input(f'Digite um número na posição ({l}, {c}): '))
 
         if matriz[l][c] % 2 == 0:
-        	soma_valores_pares +=  matriz[l][c]
-        	
+            soma_valores_pares +=  matriz[l][c]
+
         if c == 2:
-        	soma_valores_col3 += matriz[l][c]
+            soma_valores_col3 += matriz[l][c]
  
 # Imprimindo a matriz
 print('\nA matriz resultante é:')

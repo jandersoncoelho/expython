@@ -28,10 +28,11 @@
 
 def leia_dinheiro(mensagem):
     while True:
+        valor = input(mensagem).replace(',', '.')  # Substitua ',' por '.' para permitir entrada com '.' ou ','
 
-        valor = input(mensagem.replace(',', '.'))
-        if valor.isnumeric():
-            print(valor)
+        # Verifique se o valor contém apenas números e no máximo um ponto decimal
+        if valor.replace('.', '').isdigit() and valor.count('.') <= 1:
+            return float(valor)  # Converta o valor para float e retorne se for válido
         else:
-            print(f'\033[1;31mERRO! {valor} não é um valor numérico válido. Digite novamente.\033[m')
+            print(f'\033[1;31mERRO! "{valor}" não é um valor monetário válido. Digite novamente.\033[m')
 

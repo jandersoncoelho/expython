@@ -37,6 +37,6 @@ def resumo(preco=0.0, aumento=0.0, diminuicao=0.0):
     print(f'Preço analisado:\t\t{moeda(preco)}')
     print(f'Dobro do Preço:\t\t\t{dobro(preco, formatado=True)}')
     print(f'Metade do Preço:\t\t{metade(preco, formatado=True)}')
-    print(f'Aumento de {aumento}%:\t\t{aumentar(aumento, preco, formatado=True)}')
+    print(f'Aumento de {aumento}%:\t\t\t{aumentar(aumento, preco, formatado=True)}')
     print(f'Diminuição de {diminuicao}%:\t\t{diminuir(diminuicao, preco, formatado=True)}')
     print('-' * 40)  # Linha pontilhada
