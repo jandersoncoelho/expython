@@ -76,6 +76,80 @@ def altera_cor_texto(nome_cor: str = 'END') -> str:
     return cores_ansi.get(nome_cor.upper(), 'Cor não suportada')
 
 
+def mostra_mensagem(mensagem: str, nome_cor: str = 'END') -> None:
+    """
+    Função para exibir uma mensagem colorida no console.
+
+    Parâmetros:
+        - mensagem (str): A mensagem que será exibida no console.
+        - nome_cor (str): O nome da cor desejada. Pode ser uma das seguintes opções:
+            'BLACK', 'RED', 'GREEN', 'BROWN', 'BLUE', 'PURPLE', 'CYAN', 'LIGHT_GRAY',
+            'DARK_GRAY', 'LIGHT_RED', 'LIGHT_GREEN', 'YELLOW', 'LIGHT_BLUE',
+            'LIGHT_PURPLE', 'LIGHT_CYAN', 'LIGHT_WHITE', 'BOLD', 'FAINT', 'ITALIC',
+            'UNDERLINE', 'BLINK', 'NEGATIVE', 'CROSSED', 'END'.
+
+    Retorna:
+        None: A função não retorna nenhum valor, apenas exibe a mensagem colorida no console.
+
+    Exemplo de Uso:
+        >>> mostra_mensagem("O comando foi executado.", 'GREEN')
+
+    Cores Suportadas:
+        - 'BLACK': Preto
+        - 'RED': Vermelho
+        - 'GREEN': Verde
+        - 'BROWN': Marrom
+        - 'BLUE': Azul
+        - 'PURPLE': Roxo
+        - 'CYAN': Ciano
+        - 'LIGHT_GRAY': Cinza Claro
+        - 'DARK_GRAY': Cinza Escuro
+        - 'LIGHT_RED': Vermelho Claro
+        - 'LIGHT_GREEN': Verde Claro
+        - 'YELLOW': Amarelo
+        - 'LIGHT_BLUE': Azul Claro
+        - 'LIGHT_PURPLE': Roxo Claro
+        - 'LIGHT_CYAN': Ciano Claro
+        - 'LIGHT_WHITE': Branco
+        - 'BOLD': Negrito
+        - 'FAINT': Fraco
+        - 'ITALIC': Itálico
+        - 'UNDERLINE': Sublinhado
+        - 'BLINK': Piscante
+        - 'NEGATIVE': Negativo (inversão de cores)
+        - 'CROSSED': Tachado
+        - 'END': Finaliza a formatação, voltando às configurações padrão.
+    """
+    cores_ansi = {
+        'BLACK': "\033[0;30m",
+        'RED': "\033[0;31m",
+        'GREEN': "\033[0;32m",
+        'BROWN': "\033[0;33m",
+        'BLUE': "\033[0;34m",
+        'PURPLE': "\033[0;35m",
+        'CYAN': "\033[0;36m",
+        'LIGHT_GRAY': "\033[0;37m",
+        'DARK_GRAY': "\033[1;30m",
+        'LIGHT_RED': "\033[1;31m",
+        'LIGHT_GREEN': "\033[1;32m",
+        'YELLOW': "\033[1;33m",
+        'LIGHT_BLUE': "\033[1;34m",
+        'LIGHT_PURPLE': "\033[1;35m",
+        'LIGHT_CYAN': "\033[1;36m",
+        'LIGHT_WHITE': "\033[1;37m",
+        'BOLD': "\033[1m",
+        'FAINT': "\033[2m",
+        'ITALIC': "\033[3m",
+        'UNDERLINE': "\033[4m",
+        'BLINK': "\033[5m",
+        'NEGATIVE': "\033[7m",
+        'CROSSED': "\033[9m",
+        'END': "\033[0m"
+    }
+    codigo_cor = cores_ansi.get(nome_cor.upper(), '\033[0m')
+    print(f"{codigo_cor}{mensagem}{cores_ansi['END']}")
+
+
 def leia_dinheiro(mensagem):
     while True:
         valor = input(mensagem).replace(',', '.')  # Substitua ',' por '.' para permitir entrada com '.' ou ','
