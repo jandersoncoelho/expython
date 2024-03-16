@@ -1,7 +1,10 @@
+from time import sleep
+
 import ex112.utilidadescev.dado as d
+from ex115.lib.cadastro_pessoas import *
 
 
-def leia_int(mensagem: object = str) -> object:
+def leia_int(mensagem: object = str) -> int:
     while True:
         try:
             valor = int(input(mensagem))
@@ -18,25 +21,34 @@ def linha(tamanho=40):
     return "*" * tamanho
 
 
-def cabecalho(texto: str) -> object:
-    print(f'{linha()}')
-    print(texto.center(40))
-    print(f'{linha()}')
+def cabecalho(texto: str) -> str:
+    d.mostra_mensagem(f'{linha()}', 'YELLOW')
+    d.mostra_mensagem(texto.center(40), 'BLUE')
+    d.mostra_mensagem(f'{linha()}', 'YELLOW')
 
 
 def menu(lista_menu: list):
+    nome_arquivo = 'pessoas.txt'
+    if arquivo_existe(nome_arquivo):
+        d.mostra_mensagem(f'O arquivo {nome_arquivo} existe.', 'LIGHT_CYAN')
+    else:
+        d.mostra_mensagem(f'O arquivo {nome_arquivo}  não existe.', 'RED')
+        criar_arquivo(nome_arquivo)
     while True:
         cabecalho('MENU PRINCIPAL')
         for item_menu in lista_menu:
             print(item_menu)
-        print(f'{linha()}')
-        opcoes = (1, 2, 3)
-        opcao = leia_int('Digite uma das opções acima: ')
-        if opcao in opcoes:
-            cabecalho(f'opção {opcoes[opcao - 1]}.'.center(40))
-            if opcoes[opcao - 1] == 3:
-                break
-                print('Você saiu do sistema.')
+        d.mostra_mensagem(f'{linha()}', 'YELLOW')
+        opcao: int = leia_int('Digite uma das opções acima: ')
+        if opcao == 3:
+            cabecalho('Você saiu do sistema.')
+            break
+        elif opcao == 2:
+            cabecalho(lista_menu[opcao - 1])
+        elif opcao == 1:
+            cabecalho(lista_menu[opcao - 1])
+
 
         else:
             d.mostra_mensagem('A opção digitada não existe!', 'LIGHT_PURPLE')
+        sleep(2)
