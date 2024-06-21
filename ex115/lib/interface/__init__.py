@@ -48,7 +48,6 @@ def menu(lista_menu: list):
         elif opcao == 1:
             cabecalho(lista_menu[opcao - 1])
 
-
         else:
             d.mostra_mensagem('A opção digitada não existe!', 'LIGHT_PURPLE')
         sleep(2)
