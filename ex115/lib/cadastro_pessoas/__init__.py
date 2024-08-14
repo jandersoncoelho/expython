@@ -10,7 +10,6 @@ def arquivo_existe(nome_arquivo: str):
     else:
         return True
 
-
 def criar_arquivo(nome_arquivo: str):
 
     # try:
